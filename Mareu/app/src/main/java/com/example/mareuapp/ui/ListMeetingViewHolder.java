@@ -29,7 +29,7 @@ public class ListMeetingViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(Meeting meeting, MeetingListAdapter.Listener callback) {
-        colorView.setBackgroundColor(Color.parseColor(meeting.getColor().toString()));
+        colorView.setBackgroundColor(meeting.getColor());
         meetingInformation.setText(meeting.getMeetingInformation());
         participants.setText(meeting.getParticipants());
         deleteButton.setOnClickListener(view -> callback.onClickDelete(meeting));

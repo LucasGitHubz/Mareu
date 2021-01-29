@@ -7,23 +7,27 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 
 public class Meeting {
-    private Color meetingColor;
-    private String meetingInformation;
+    private Integer meetingColor;
+    private String hour;
+    private String room;
+    private String topic;
     private String participants;
 
-    public Meeting(Color meetingColor, String meetingInformation, String participants) {
+    public Meeting(Integer meetingColor, String hour, String room, String topic, String participants) {
         this.meetingColor = meetingColor;
-        this.meetingInformation = meetingInformation;
+        this.hour = hour;
+        this.room = room;
+        this.topic = topic;
         this.participants = participants;
     }
 
     // --- GETTERS ---
-    public Color getColor() {
+    public Integer getColor() {
         return meetingColor;
     }
 
     public String getMeetingInformation() {
-        return meetingInformation;
+        return room + " - " + hour + " - " + topic;
     }
 
     public String getParticipants() {
@@ -35,11 +39,11 @@ public class Meeting {
         if (obj == null) return false;
         if (obj == this) return true;
         if (!(obj instanceof Meeting)) return false;
-        return (((Meeting) obj).meetingInformation == this.meetingInformation);
+        return (((Meeting) obj).room == this.room);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(meetingInformation);
+        return Objects.hash(room);
     }
 }
