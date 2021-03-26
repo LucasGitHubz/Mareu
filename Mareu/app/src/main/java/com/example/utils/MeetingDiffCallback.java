@@ -28,7 +28,7 @@ public class MeetingDiffCallback extends DiffUtil.Callback{
 
     @Override
     public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-        return oldMeetings.get(oldItemPosition).getMeetingInformation() == newMeeting.get(newItemPosition).getMeetingInformation() ;
+        return oldMeetings.get(oldItemPosition).getStartTime() == newMeeting.get(newItemPosition).getStartTime() ;
     }
 
     @Override

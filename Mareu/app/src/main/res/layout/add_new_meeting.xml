@@ -6,124 +6,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.mareuapp.ui.AddMeetingActivity">
 
-    <ImageView
-        android:id="@+id/rgbWheel"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:visibility="invisible"
-        android:src="@drawable/rgb_image"
-        app:layout_constraintHeight_percent="0.5"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/confirmColorBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.4"
-        android:layout_margin="50dp"
-        android:visibility="invisible"
-        android:text="Valider"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rgbWheel"/>
-
     <LinearLayout
         android:id="@+id/textInpoutContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/add_button">
+        app:layout_constraintBottom_toTopOf="@+id/addingErrorTV">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Ajoute ta réu"
-            android:textAlignment="center"
-            android:textSize="40sp"
-            android:textColor="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/hourLyt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:boxBackgroundColor="@android:color/transparent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/hour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Heure"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/room_lyt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            app:boxBackgroundColor="@android:color/transparent">
+            android:hint="Lieu"
+            app:boxBackgroundColor="@android:color/transparent"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/room"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Lieu"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/topic_lyt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            app:boxBackgroundColor="@android:color/transparent">
+            android:layout_marginTop="5dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:hint="Sujet"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/topic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Sujet"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/participants_lyt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            app:boxBackgroundColor="@android:color/transparent">
+            android:layout_marginTop="5dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:ems="10"
+            android:hint="Participants"
+            android:maxLines="100"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/participants"
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Participants"
-                android:maxLines="100"
-                />
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:text="Heure de début :"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:text="Heure de fin :"
+                android:textSize="14sp"/>
+        </LinearLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/startTime_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="00:01"
+                android:layout_marginEnd="40dp"/>
+            <Button
+                android:id="@+id/endTime_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="23:59"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:text="Ajouter une couleur :"
-            android:textSize="20sp"/>
+            android:textSize="14sp"/>
 
         <LinearLayout
             android:id="@+id/addColorlabel"
@@ -132,22 +98,37 @@
             android:gravity="center"
             android:layout_marginTop="10dp">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/chooseColorButton"
+            <com.example.colorpicker.FloatingButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"/>
-
+                android:layout_margin="5dp"
+                android:padding="20dp" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/addingErrorTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/textInpoutContainer"
+        app:layout_constraintBottom_toTopOf="@id/add_button"/>
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:padding="15dp"
         android:text="Ajouter"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 

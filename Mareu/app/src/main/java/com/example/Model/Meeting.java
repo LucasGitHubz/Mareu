@@ -8,14 +8,16 @@ import java.util.Objects;
 
 public class Meeting {
     private Integer meetingColor;
-    private String hour;
+    private String startTime;
+    private String endTime;
     private String room;
     private String topic;
     private String participants;
 
-    public Meeting(Integer meetingColor, String hour, String room, String topic, String participants) {
+    public Meeting(Integer meetingColor, String startTime, String endTime, String room, String topic, String participants) {
         this.meetingColor = meetingColor;
-        this.hour = hour;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.room = room;
         this.topic = topic;
         this.participants = participants;
@@ -26,8 +28,19 @@ public class Meeting {
         return meetingColor;
     }
 
-    public String getMeetingInformation() {
-        return room + " - " + hour + " - " + topic;
+    public String getStartTime() {
+        return startTime;
+    }
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public String getTopic() {
+        return topic;
     }
 
     public String getParticipants() {
@@ -35,15 +48,15 @@ public class Meeting {
     }
 
     @Override
-    public boolean equals(@Nullable Object obj) {
-        if (obj == null) return false;
-        if (obj == this) return true;
-        if (!(obj instanceof Meeting)) return false;
-        return (((Meeting) obj).room == this.room);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Meeting meeting = (Meeting) o;
+        return Objects.equals(startTime, meeting.startTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(room);
+        return Objects.hash(startTime);
     }
 }

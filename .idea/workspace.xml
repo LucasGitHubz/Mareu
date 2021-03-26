@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43c3ac9d-7dba-48cc-b978-4ce27d53d27f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/FiltersFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/service/AlertGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/utils/CalendarParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/utils/CustomValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/utils/MyObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/filter_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/Model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/Model/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/AddMeetingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/ListMeetingViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/ListMeetingViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/MeetingListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/mareuapp/ui/MeetingListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/service/DummyMeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/service/DummyMeetingApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/service/MeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/service/MeetingApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/utils/MeetingDiffCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/java/com/example/utils/MeetingDiffCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/activity_list_meeting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/activity_list_meeting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/add_new_meeting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/add_new_meeting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/item_list_meeting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/res/layout/item_list_meeting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/app/src/test/java/com/example/mareu/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/app/src/test/java/com/example/mareu/MaReuUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mareu/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Mareu/build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qIZ8lwxcx4lbEEYxcVk3Zsg4R8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43c3ac9d-7dba-48cc-b978-4ce27d53d27f" name="Default Changelist" comment="" />
+      <created>1616768907660</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616768907660</updated>
+    </task>
+    <servers />
+  </component>
+</project>

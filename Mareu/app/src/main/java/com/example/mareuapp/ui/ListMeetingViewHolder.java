@@ -1,5 +1,6 @@
 package com.example.mareuapp.ui;
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageButton;
@@ -29,8 +30,8 @@ public class ListMeetingViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(Meeting meeting, MeetingListAdapter.Listener callback) {
-        colorView.setBackgroundColor(meeting.getColor());
-        meetingInformation.setText(meeting.getMeetingInformation());
+        colorView.setBackgroundTintList(ColorStateList.valueOf(meeting.getColor()));
+        meetingInformation.setText(meeting.getRoom() + " - " + meeting.getStartTime() + "-" + meeting.getEndTime() + " - " + meeting.getTopic());
         participants.setText(meeting.getParticipants());
         deleteButton.setOnClickListener(view -> callback.onClickDelete(meeting));
     }

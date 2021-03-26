@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filtrer par :"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Heure :"
+                android:textSize="14sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp">
+                <Button
+                    android:id="@+id/startTimeButton"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:layout_marginEnd="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="à"
+                    android:textSize="20dp"
+                    android:layout_marginEnd="30dp"/>
+                <Button
+                    android:id="@+id/endTimeButton"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="23:59"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/noMeetingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:visibility="invisible"
+                android:text="Veuillez choisir deux horaires différents"
+                android:textSize="10sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:text="Lieu :"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/roomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="nom de la salle"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/noRoomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:visibility="invisible"
+                android:text="Aucune réunion n'a lieu dans cette salle"
+                android:textSize="10sp"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/validFiltersBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Valider"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
