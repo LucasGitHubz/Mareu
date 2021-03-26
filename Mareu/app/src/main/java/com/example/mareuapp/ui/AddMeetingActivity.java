@@ -26,6 +26,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.Model.Meeting;
+import com.example.colorpicker.FloatingButton;
 import com.example.di.DI;
 import com.example.mareu.R;
 import com.example.service.MeetingApiService;
@@ -62,6 +63,8 @@ public class AddMeetingActivity extends AppCompatActivity {
     TextView errorMessage;
     @BindView(R.id.add_button)
     Button addMeetingBtn;
+    @BindView(R.id.colorPickerButton)
+    FloatingButton colorPickerButton;
 
     private MeetingApiService mApiService;
     private Bitmap bitmap;
@@ -78,6 +81,7 @@ public class AddMeetingActivity extends AppCompatActivity {
         mApiService = DI.getMeetingApiService();
         hourInputInit();
 
+        colorPickerButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.purple_500)));
         Map map = new HashMap<Integer, CustomValidator>();
         map.put(R.id.room_lyt, new CustomValidator() {
             @Override
@@ -185,7 +189,7 @@ public class AddMeetingActivity extends AppCompatActivity {
     @OnClick(R.id.add_button)
     void addMeeting() {
         Meeting meeting = new Meeting(
-                color = color,
+                color = colorPickerButton.getBackgroundTintList().getDefaultColor(),
                 startTimeBtn.getText().toString(),
                 endTimeBtn.getText().toString(),
                 roomInput.getText().toString(),
