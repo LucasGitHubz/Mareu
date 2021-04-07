@@ -3,10 +3,13 @@ package com.example.mareuapp.ui;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.TimePickerDialog;
+import android.content.res.Configuration;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.OrientationEventListener;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,6 +48,7 @@ public class MeetingListActivity extends AppCompatActivity implements MeetingLis
     // FOR DATA ---
     MeetingListAdapter adapter;
     private MeetingApiService mApiService;
+    OrientationEventListener orientationListener;
 
     // OVERRIDE ---
 
@@ -58,6 +62,11 @@ public class MeetingListActivity extends AppCompatActivity implements MeetingLis
         cancelFilterButton = findViewById(R.id.cancelFilterBtn);
         configureFab();
         configureRecyclerView();
+        orientationListener = new OrientationEventListener(this, SensorManager.SENSOR_DELAY_UI) {
+            public void onOrientationChanged(int orientation) {
+                mApiService.clearMeetings();
+            }
+        };
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +93,7 @@ public class MeetingListActivity extends AppCompatActivity implements MeetingLis
     @Override
     protected void onResume() {
         super.onResume();
+        orientationListener.enable();
         loadData(mApiService.getMeetings());
     }
 

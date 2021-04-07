@@ -12,6 +12,7 @@
 
         <activity
             android:name="com.example.mareuapp.ui.MeetingListActivity"
+            android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.mareuapp.ui.AddMeetingActivity"
+            android:screenOrientation="fullSensor"
             android:label="@string/app_name"/>
     </application>
 
